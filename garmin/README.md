@@ -72,7 +72,7 @@ DATA="$(pwd)/6324*.pbf"
 
 popd > /dev/null
 
-OPTIONS="$(pwd)/opentopomap_options"
+OPTIONS="$(pwd)/mkgmap_options"
 STYLEFILE="$(pwd)/style/opentopomap"
 
 pushd style/typ > /dev/null
