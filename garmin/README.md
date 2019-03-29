@@ -14,8 +14,8 @@ Download [mkgmap](http://www.mkgmap.org.uk/download/mkgmap.html),
 [splitter](http://www.mkgmap.org.uk/download/splitter.html) & bounds
 
 ```bash
-MKGMAP="mkgmap-r4136" # adjust to latest version (see www.mkgmap.org.uk)
-SPLITTER="splitter-r591"
+MKGMAP="mkgmap-r4248" # adjust to latest version (see www.mkgmap.org.uk)
+SPLITTER="splitter-r592"
 
 mkdir tools
 pushd tools > /dev/null
@@ -39,8 +39,8 @@ if stat --printf='' bounds/bounds_*.bnd 2> /dev/null; then
 else
     echo "downloading bounds"
     rm -f bounds.zip  # just in case
-    wget "http://osm2.pleiades.uni-wuppertal.de/bounds/latest/bounds.zip"
-    unzip "bounds.zip" -d bounds
+    wget "http://osm.thkukuk.de/data/bounds-latest.zip"
+    unzip "bounds-latest.zip" -d bounds
 fi
 
 BOUNDS="$(pwd)/bounds"
@@ -50,8 +50,8 @@ if stat --printf='' sea/sea_*.pbf 2> /dev/null; then
 else
     echo "downloading sea"
     rm -f sea.zip  # just in case
-    wget "http://osm2.pleiades.uni-wuppertal.de/sea/latest/sea.zip"
-    unzip "sea.zip" -d sea
+    wget "http://osm.thkukuk.de/data/sea-latest.zip"
+    unzip "sea-latest.zip" # unlike bounds-latest, sea.zip contains sea/ folder already
 fi
 
 SEA="$(pwd)/sea"
